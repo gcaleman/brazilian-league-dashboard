@@ -1,0 +1,9 @@
+version: '3'
+services:
+  seriea-dashboard:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: seriea-dashboard
+    ports:
+    - 8080:8080
