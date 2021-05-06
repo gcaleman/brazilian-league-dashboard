@@ -1,9 +1,64 @@
-.App {
-  text-align: left;
-  padding: 20px;
+.header {
+    text-align: center;
+    padding: 25px;
 }
 
-.header {
-  text-align: center;
-  padding: 25px;
+.teamName {
+    text-align: center;
+    padding: 25px;
 }
+
+.GoalsCard {
+    color: navy;
+    height: max-content;
+    padding: 40px;
+    border-left: 1px solid navy;
+    border-radius: 3px;
+}
+
+.SeasonList {
+    color: navy;
+    height: max-content;
+    padding: 20px;
+    border-left: 1px solid navy;
+    border-radius: 3px;
+}
+
+.SeasonGamesCard {
+    height: max-content;
+    padding: 20px;
+    border-left: 1px solid navy;
+    border-radius: 3px;
+}
+
+.ResultsCard {
+    height: max-content;
+    border-left: 1px solid navy;
+    border-radius: 3px;
+}
+
+.header1 {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid navy;
+}
+
+.h3header {
+    text-align: center;
+    padding: 10px;
+}
+
+.Footer {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(58, 120, 255);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
