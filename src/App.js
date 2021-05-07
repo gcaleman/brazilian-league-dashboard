@@ -8,7 +8,6 @@ import { NavigationBar } from './components/NavigationBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Footer } from './components/Footer';
 
-
 function App() {
   return (
     <div className="App">
@@ -26,11 +25,10 @@ function App() {
           <TeamDetailPage />
         </Route>
         <Route path="/" exact component={TeamPage} />
-
       </Switch>
       <Footer />
     </div>
   );
 }
 
-export default App;
+export default (App);
