@@ -4,10 +4,7 @@ import com.brazilseriea.v1.model.Team;
 import com.brazilseriea.v1.response.NotAcceptable;
 import com.brazilseriea.v1.response.NotFound;
 import com.brazilseriea.v1.services.V1Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +24,7 @@ public class V1Controller {
         return service.getAllTeamsNames();
     }
 
-    @GetMapping("/team/{name}")
+    @GetMapping("/teams/{name}")
     public Team getTeamName(@PathVariable String name) {
         List<String> checkName = new ArrayList<>();
         if (name.isEmpty()) {
@@ -41,8 +38,8 @@ public class V1Controller {
         return service.getTeamByName(name);
     }
 
-    @GetMapping("/team/{name}/{season}")
-    public Team getTeamNameSeason(@PathVariable String name, @PathVariable Long season) {
+    @GetMapping("/team/{name}")
+    public Team getTeamNameSeason(@PathVariable String name, @RequestParam Long season) {
         if (getTeamName(name).getMatches().isEmpty()) {
             throw new NotFound("Team not found!");
         } else {

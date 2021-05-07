@@ -17,10 +17,10 @@ public interface MatchRepository extends CrudRepository<Match, Long> {
     @Query("select distinct m.season from Match m where m.home = :home")
     List<Long> findDistinctBySeasonAndHome(@Param("home") String home);
 
-    @Query("select count(m.res) from Match m where m.home = :home and m.res = 'H' group by m.res")
-    Integer getTeamHomeVictories(@Param("home") String home);
-
-    @Query("select count(m.res) from Match m where m.away = :away and m.res = 'A' group by m.res")
-    Integer getTeamAwayVictories(@Param("away") String away);
+//    @Query("select count(m.res) from Match m where m.home = :home and m.res = 'H' group by m.res")
+//    Integer getTeamHomeVictories(@Param("home") String home);
+//
+//    @Query("select count(m.res) from Match m where m.away = :away and m.res = 'A' group by m.res")
+//    Integer getTeamAwayVictories(@Param("away") String away);
 
 }
