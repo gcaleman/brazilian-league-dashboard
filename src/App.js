@@ -12,20 +12,21 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <div className="App">
-        <Router>
-          <NavigationBar />
-        </Router>
+      <Router>
+        <NavigationBar />
+      </Router>
       <Switch>
-        <Route path="/" exact component={TeamPage} />
-        <Route path='/team/:handle'>
-          <TeamDetailPage />
+        <Route path='/match/:home/:away/:gameSeason'>
+          <GameDetailPage />
         </Route>
         <Route path='/season/:teamName/:season'>
           <SeasonDetailPage />
         </Route>
-        <Route path='/match/:home/:away/:gameSeason'>
-          <GameDetailPage />
+        <Route path='/team/:handle'>
+          <TeamDetailPage />
         </Route>
+        <Route path="/" exact component={TeamPage} />
+
       </Switch>
       <Footer />
     </div>

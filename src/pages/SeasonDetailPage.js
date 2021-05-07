@@ -19,7 +19,7 @@ export const SeasonDetailPage = () => {
     useEffect(
         () => {
             const fetchData = async () => {
-                const response = await fetch(`http://localhost:8080/team/${teamName}/${season}`);
+                const response = await fetch(`http://localhost:8080/team/${teamName}?season=${season}`);
                 const data = await response.json();
                 setTeam(data);
             }
@@ -58,8 +58,10 @@ export const SeasonDetailPage = () => {
                 />
                 <Container>
                     <Row>
-                        <Col md={10}></Col>
-                        <Col>
+                        <Col md={4}>
+
+                        </Col>
+                        <Col md={8}>
                             <Navbar.Brand href={`/team/${team.teamName}`}><h4>{team.teamName.toUpperCase()}</h4></Navbar.Brand>
                         </Col>
                     </Row>
