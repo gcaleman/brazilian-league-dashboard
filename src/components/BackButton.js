@@ -1,12 +1,18 @@
 import {React} from 'react';
 import {Button} from 'react-bootstrap';
 
-export const BackButton = () => {
+export const BackButton = ({team}) => {
+
+    if (!team) {
+        return(
+            <h4>Error!</h4>
+        )
+    }
 
     const buttonStyle = {
         position: 'fixed',
-        bottom: '0px',
-        right: '0px'
+        bottom: '70px',
+        right: '0px',
     }
 
     const goBack = () => { 
@@ -14,6 +20,6 @@ export const BackButton = () => {
     }
 
     return (
-        <Button onClick={goBack} style={buttonStyle}>Go Back</Button>
+        <Button onClick={goBack} variant={team === "Corinthians" ? "dark" : "primary"} style={buttonStyle}>Go Back</Button>
     )
 }

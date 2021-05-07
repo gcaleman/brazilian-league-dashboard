@@ -29,12 +29,11 @@ export const GameDetailPage = () => {
     }
 
     const getDetailMatch = () => {
-        let matchDate = new Date();
-        let formatted_date = matchDate.getDate() + " " + months[matchDate.getMonth()] + " " + matchDate.getFullYear()
         team.matches.map(match => {
             if (match.home === home && match.away === away && match.season == gameSeason) {
                 detailMatch = match;
-                matchDate = match.date;
+                let matchDate = new Date(match.date);
+                let formatted_date = matchDate.getDate() + " " + months[matchDate.getMonth()] + " " + matchDate.getFullYear()
                 detailMatch.date = formatted_date;
             }
         })
@@ -52,8 +51,8 @@ export const GameDetailPage = () => {
                     className="d-inline-block align-top icon"
                     alt={team.teamName}
                 />
-                <Link to={`/team/${detailMatch.home}`}>  {detailMatch.home}  </Link> 
-                vs 
+                <Link to={`/team/${detailMatch.home}`}>  {detailMatch.home}  </Link>
+                vs
                 <Link to={`/team/${detailMatch.away}`}>  {detailMatch.away}</Link>  <img
                     src={`/logos/${detailMatch.away}.png`}
                     width="35"
@@ -63,7 +62,7 @@ export const GameDetailPage = () => {
                 />
             </h1>
             <GameDetailCard match={detailMatch} />
-            <BackButton />
+            <BackButton team={team.teamName} />
         </div>
     )
 }

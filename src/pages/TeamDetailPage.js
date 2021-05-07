@@ -28,9 +28,10 @@ export const TeamDetailPage = () => {
         return <h1>Loading..</h1>
     }
 
+
     return (
         <div className="TeamDetailPage">
-            <Navbar bg="light" variant="light">
+            <Navbar bg={team.teamName === "Corinthians" ? "dark" : "light"} variant={team.teamName === "Corinthians" ? "dark" : "light"}>
                 <img
                     src={`/logos/${team.teamName}.png`}
                     width="35"
@@ -40,9 +41,14 @@ export const TeamDetailPage = () => {
                 />
                 <Container>
                     <Row>
-                        <Col md={1}></Col>
-                        <Col md={11}>
-                            <Navbar.Brand href={`/team/${team.teamName}`}><h4>{team.teamName}</h4></Navbar.Brand>
+                        <Col md={4}>
+
+                        </Col>
+                        <Col md={4}>
+                            <Navbar.Brand href={`/team/${team.teamName}`}><h4>{team.teamName.toUpperCase()}</h4></Navbar.Brand>
+                        </Col>
+                        <Col md={4}>
+
                         </Col>
                     </Row>
                 </Container>
@@ -50,11 +56,9 @@ export const TeamDetailPage = () => {
             <Container>
                 <Row>
                     <Col md={4}>
-                        <div>
-                            <h4 className="h3header">Seasons in Serie A</h4>
-                            <hr></hr>
-                            <SeasonList teamName={team.teamName} />
-                        </div>
+                        <h4 className="h3header">Seasons in Serie A</h4>
+                        <hr></hr>
+                        <SeasonList teamName={team.teamName} />
                     </Col>
                     <Col md={4} >
                         <h4 className="h3header">Goals Seasons 2012 to 2020</h4>
@@ -68,7 +72,7 @@ export const TeamDetailPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <BackButton />
+            <BackButton team={team.teamName} />
         </div >
     )
 

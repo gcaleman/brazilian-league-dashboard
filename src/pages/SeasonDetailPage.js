@@ -1,7 +1,7 @@
-import { React, useEffect, useState } from 'react';
+import { React, useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { SeasonGamesCard } from '../components/SeasonGamesCard';
-import { Container, Row, Col, Navbar } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Form } from 'react-bootstrap';
 import { GoalsCard } from '../components/GoalsCard';
 import { ResultsCard } from '../components/ResultsCard';
 import { BackButton } from '../components/BackButton';
@@ -9,6 +9,10 @@ import { BackButton } from '../components/BackButton';
 export const SeasonDetailPage = () => {
 
     const [team, setTeam] = useState({ matches: [] });
+    const [searchTerm, setSearchTerm] = useState("");
+    const [searchResults, setsearchResults] = useState([]);
+
+    const inputEl = useRef("");
 
     const { teamName, season } = useParams();
 
@@ -28,9 +32,23 @@ export const SeasonDetailPage = () => {
         return <h1>Loading..</h1>
     }
 
+    const list = team.matches;
+
+    const getSearchTerm = () => {
+        setSearchTerm(inputEl.current.value);
+        if (searchTerm) {
+            const newMatchList = list.filter(matches => {
+                return Object.values(matches).join(" ").toLowerCase().includes(searchTerm.toLowerCase())
+            });
+            setsearchResults(newMatchList);
+        } else {
+            setsearchResults(list);
+        }
+    }
+
     return (
         <div className="SeasonDetailPage">
-            <Navbar bg="light" variant="light">
+            <Navbar bg={team.teamName === "Corinthians" ? "dark" : "light"} variant={team.teamName === "Corinthians" ? "dark" : "light"}>
                 <img
                     src={`/logos/${team.teamName}.png`}
                     width="35"
@@ -40,19 +58,24 @@ export const SeasonDetailPage = () => {
                 />
                 <Container>
                     <Row>
-                        <Col md={1}></Col>
-                        <Col md={11}>
-                            <Navbar.Brand href={`/team/${team.teamName}`}><h4>{team.teamName}</h4></Navbar.Brand>
+                        <Col md={10}></Col>
+                        <Col>
+                            <Navbar.Brand href={`/team/${team.teamName}`}><h4>{team.teamName.toUpperCase()}</h4></Navbar.Brand>
                         </Col>
                     </Row>
                 </Container>
+                <Col md={5}>
+                    <Form.Group>
+                        <Form.Control ref={inputEl} type="text" placeholder="Search team" value={searchTerm} onChange={getSearchTerm} />
+                    </Form.Group>
+                </Col>
             </Navbar>
             <Container>
                 <Row>
                     <Col md={4} >
                         <h4 className="h3header">Matches</h4>
                         <hr></hr>
-                        <SeasonGamesCard team={team} />
+                        <SeasonGamesCard list={searchTerm.length < 1 ? list : searchResults} />
                     </Col>
                     <Col md={4} style={{ position: 'center' }}>
                         <h4 className="h3header">Goals</h4>
@@ -66,7 +89,7 @@ export const SeasonDetailPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <BackButton />
+            <BackButton team={team.teamName} />
         </div>
     )
 
