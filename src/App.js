@@ -1,7 +1,7 @@
 import './App.css';
 import { TeamDetailPage } from './pages/TeamDetailPage';
 import { TeamPage } from './pages/TeamPage';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { SeasonDetailPage } from './pages/SeasonDetailPage';
 import { GameDetailPage } from './pages/GameDetailPage';
 import { NavigationBar } from './components/NavigationBar';
