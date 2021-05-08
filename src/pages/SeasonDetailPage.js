@@ -19,7 +19,7 @@ export const SeasonDetailPage = () => {
     useEffect(
         () => {
             const fetchData = async () => {
-                const response = await fetch(`http://brazilianleaguedashboardapi-env.eba-nck3umht.eu-west-1.elasticbeanstalk.com/team/${teamName}?season=${season}`);
+                const response = await fetch(`https://brazilianleaguedashboardapi-env.eba-nck3umht.eu-west-1.elasticbeanstalk.com/team/${teamName}?season=${season}`);
                 const data = await response.json();
                 setTeam(data);
             }
