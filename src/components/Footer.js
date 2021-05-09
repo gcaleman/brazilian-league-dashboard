@@ -16,13 +16,13 @@ export const Footer = () => {
         <div className="Footer">
             <Container>
                 <Row>
-                    <Col md={4}>
+                    <Col >
                         <div style={{ textAlign: 'left', color: 'white' }}>@Copyright</div>
                     </Col>
-                    <Col md={2}>
+                    <Col >
                         <div style={{ textAlign: 'center' }}><FaLinkedin className="icon" style={{ color: 'white' }} onClick={openLinkedin} /></div>
                     </Col>
-                    <Col md={2}>
+                    <Col >
                         <div style={{ textAlign: 'center' }}><FaGithub className="icon" style={{ color: 'white' }} onClick={openGithub} /></div>
                     </Col>
                 </Row>

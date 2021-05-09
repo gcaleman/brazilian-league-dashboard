@@ -11,7 +11,7 @@ export const BackButton = ({team}) => {
 
     const buttonStyle = {
         position: 'fixed',
-        bottom: '70px',
+        bottom: '60px',
         right: '0px',
     }
 
