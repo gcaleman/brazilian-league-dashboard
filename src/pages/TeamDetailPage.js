@@ -58,7 +58,7 @@ export const TeamDetailPage = () => {
                         <SeasonList teamName={team.teamName} />
                     </Col>
                     <Col md={4} >
-                        <h4 className="h3header">Goals Seasons 2012 to 2020</h4>
+                        <h4 className="h3header">Goals </h4>
                         <hr></hr>
                         <GoalsCard team={team} />
                     </Col>

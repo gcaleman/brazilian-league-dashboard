@@ -22,7 +22,7 @@ export const SeasonList = ({ teamName }) => {
                 const seasonLink = `/season/${teamName}/${seasons}`;
                 return (
                     <ol key={index}>
-                        <h3> <Link to={seasonLink}>{seasons}</Link> </h3>
+                        <h3> <Link style={{ fontSize:'35px', color:'navy' }} to={seasonLink}>{seasons}</Link> </h3>
                         <hr></hr>
                     </ol>
                 )

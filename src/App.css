@@ -11,7 +11,7 @@
 .GoalsCard {
     color: navy;
     height: max-content;
-    padding: 40px;
+    padding-left: 20px;
     border-left: 1px solid navy;
     border-radius: 3px;
 }
@@ -19,14 +19,12 @@
 .SeasonList {
     color: navy;
     height: max-content;
-    padding: 20px;
     border-left: 1px solid navy;
     border-radius: 3px;
 }
 
 .SeasonGamesCard {
     height: max-content;
-    padding: 20px;
     border-left: 1px solid navy;
     border-radius: 3px;
 }
