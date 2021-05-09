@@ -8,7 +8,7 @@ export const SeasonList = ({ teamName }) => {
     useEffect(
         () => {
             const fetchTeamSeasons = async () => {
-                const response = await fetch(`https://brazilianleaguedashboardapi-env.eba-nck3umht.eu-west-1.elasticbeanstalk.com/team/seasons/${teamName}`)
+                const response = await fetch(`https://dashboardapi.brazilianleaguedashboard.link/team/seasons/${teamName}`)
                 const data = await response.json();
                 setSeason(data);
             }

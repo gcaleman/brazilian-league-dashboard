@@ -16,7 +16,7 @@ export const GameDetailPage = () => {
     useEffect(
         () => {
             const fetchTeamData = async () => {
-                const response = await fetch(`https://brazilianleaguedashboardapi-env.eba-nck3umht.eu-west-1.elasticbeanstalk.com/teams/${home}`);
+                const response = await fetch(`https://dashboardapi.brazilianleaguedashboard.link/teams/${home}`);
                 const data = await response.json();
                 setTeam(data);
             }
