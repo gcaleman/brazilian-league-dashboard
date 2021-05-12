@@ -72,7 +72,7 @@ export const SeasonDetailPage = () => {
                     </Form.Group>
                 </Col>
             </Navbar>
-            <Container>
+            <Container style={{ paddingBottom: '60px' }}>
                 <Row>
                     <Col md={4} >
                         <h4 className="h3header">Matches</h4>

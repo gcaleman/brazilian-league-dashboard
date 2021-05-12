@@ -42,7 +42,7 @@ export const GameDetailPage = () => {
     getDetailMatch();
 
     return (
-        <div className="GameDetailPage">
+        <div className="GameDetailPage" style={{ paddingBottom: '60px' }}>
             <h1 className="header1">
                 <img
                     src={`/logos/${detailMatch.home}.png`}

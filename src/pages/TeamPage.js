@@ -53,7 +53,7 @@ export const TeamPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container>
+            <Container style={{ paddingBottom: '60px' }}>
                 <Row>
                     <Col md={1} style={{ backgroundColor: 'blue', right: '15px' }}>
                     </Col>
