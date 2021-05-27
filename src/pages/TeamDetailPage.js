@@ -50,7 +50,7 @@ export const TeamDetailPage = () => {
                     </Row>
                 </Container>
             </Navbar>
-            <Container style={{ paddingBottom: '60px' }}>
+            <Container style={{ paddingBottom: '60px', marginTop: '20px' }}>
                 <Row>
                     <Col md={4}>
                         <h4 className="h3header">Seasons in Serie A</h4>
