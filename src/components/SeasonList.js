@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export const SeasonList = ({ teamName }) => {
@@ -17,16 +18,19 @@ export const SeasonList = ({ teamName }) => {
     )
 
     return (
-        <div className="SeasonList">
+        <>
             {seasonList.map((seasons, index) => {
                 const seasonLink = `/season/${teamName}/${seasons}`;
                 return (
-                    <ol key={index}>
-                        <h3> <Link style={{ fontSize:'35px', color:'navy' }} to={seasonLink}>{seasons}</Link> </h3>
-                        <hr></hr>
-                    </ol>
+                    <Link style={{ fontSize: '30px', color: 'navy', textDecoration: 'none' }} to={seasonLink}>
+                        <Card className='games_card'>
+                            <ol key={index}>
+                                <h5>{seasons}</h5>
+                            </ol>
+                        </Card>
+                    </Link>
                 )
             })}
-        </div>
+        </>
     )
 }

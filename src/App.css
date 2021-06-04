@@ -1,3 +1,7 @@
+.App {
+    background-color: ivory;
+}
+
 .header {
     text-align: center;
     padding: 25px;
@@ -11,28 +15,69 @@
 .GoalsCard {
     color: navy;
     height: max-content;
-    padding-left: 20px;
-    border-left: 1px solid navy;
-    border-radius: 3px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.GoalsCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .SeasonList {
     color: navy;
     height: max-content;
-    border-left: 1px solid navy;
-    border-radius: 3px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.SeasonList:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .SeasonGamesCard {
     height: max-content;
-    border-left: 1px solid navy;
-    border-radius: 3px;
+    width: auto;
+    padding: 10px;
+}
+
+.games_card {
+    color: navy;
+    height: max-content;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 20px 10px 0 0;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.games_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .ResultsCard {
     height: max-content;
-    border-left: 1px solid navy;
-    border-radius: 3px;
+}
+
+.chart_card {
+    color: navy;
+    height: max-content;
+    width: max-content;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    align-items: center;
+    padding: 20px 0 0 0;
+    margin: 0 10px 10px 0;
+}
+
+.chart_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header1 {
@@ -60,3 +105,6 @@
     transform: scale(1.5);
 }
 
+.SeasonDetailPage h4 {
+    padding-top: 20px;
+}

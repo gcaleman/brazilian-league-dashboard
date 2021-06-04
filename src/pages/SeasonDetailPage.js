@@ -48,7 +48,7 @@ export const SeasonDetailPage = () => {
 
     return (
         <div className="SeasonDetailPage">
-            <Navbar bg={team.teamName === "Corinthians" ? "dark" : "light"} variant={team.teamName === "Corinthians" ? "dark" : "light"}>
+            <Navbar bg={team.teamName === "Corinthians" ? "dark" : "light"} variant={team.teamName === "Corinthians" ? "dark" : "light"} sticky="top">
                 <img
                     src={`/logos/${team.teamName}.png`}
                     width="35"
@@ -62,7 +62,7 @@ export const SeasonDetailPage = () => {
 
                         </Col>
                         <Col md={8}>
-                            <Navbar.Brand href={`/team/${team.teamName}`}><h4>{team.teamName.toUpperCase()}</h4></Navbar.Brand>
+                            <Navbar.Brand href={`/team/${team.teamName}`}><h5>{team.teamName.toUpperCase()}</h5></Navbar.Brand>
                         </Col>
                     </Row>
                 </Container>

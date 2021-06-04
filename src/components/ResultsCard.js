@@ -1,5 +1,7 @@
 import { React } from 'react';
 import { Chart } from "react-google-charts";
+import { Card } from 'react-bootstrap';
+import './ResultsCard.css';
 
 export const ResultsCard = ({ team }) => {
 
@@ -52,57 +54,63 @@ export const ResultsCard = ({ team }) => {
 
     return (
         <div className="ResultsCard">
-            <Chart
-                width={'350x'}
-                height={'300px'}
-                chartType="PieChart"
-                loader={<div>Loading Chart</div>}
-                data={[
-                    ['Results', 'All seasons'],
-                    ['Wins', results.wins.length],
-                    ['Loss', results.loss.length],
-                    ['Draws', results.draws.length],
-                ]}
-                options={{
-                    title: 'Results All Seasons',
-                    is3D: 'true'
-                }}
-                rootProps={{ 'data-testid': '1' }}
-            />
-            <Chart
-                width={'350x'}
-                height={'300px'}
-                chartType="PieChart"
-                loader={<div>Loading Chart</div>}
-                data={[
-                    ['Results', 'Home Games'],
-                    ['Wins', results.homeWins.length],
-                    ['Loss', results.homeLoss.length],
-                    ['Draws', results.homeDraws.length],
-                ]}
-                options={{
-                    title: 'Home Games',
-                    is3D: 'true'
-                }}
-                rootProps={{ 'data-testid': '1' }}
-            />
-            <Chart
-                width={'350x'}
-                height={'300px'}
-                chartType="PieChart"
-                loader={<div>Loading Chart</div>}
-                data={[
-                    ['Results', 'Away Games'],
-                    ['Wins', results.awayWins.length],
-                    ['Loss', results.awayLoss.length],
-                    ['Draws', results.awayDraws.length],
-                ]}
-                options={{
-                    title: 'Away Games',
-                    is3D: 'true'
-                }}
-                rootProps={{ 'data-testid': '1' }}
-            />
+            <Card className="chart_card">
+                <Chart
+                    width={'350px'}
+                    height={'auto'}
+                    chartType="PieChart"
+                    loader={<div>Loading Chart</div>}
+                    data={[
+                        ['Results', 'All seasons'],
+                        ['Wins', results.wins.length],
+                        ['Loss', results.loss.length],
+                        ['Draws', results.draws.length],
+                    ]}
+                    options={{
+                        title: 'Results All Seasons',
+                        is3D: 'true'
+                    }}
+                    rootProps={{ 'data-testid': '1' }}
+                />
+            </Card>
+            <Card className="chart_card">
+                <Chart
+                    width={'350px'}
+                    height={'auto'}
+                    chartType="PieChart"
+                    loader={<div>Loading Chart</div>}
+                    data={[
+                        ['Results', 'Home Games'],
+                        ['Wins', results.homeWins.length],
+                        ['Loss', results.homeLoss.length],
+                        ['Draws', results.homeDraws.length],
+                    ]}
+                    options={{
+                        title: 'Home Games',
+                        is3D: 'true'
+                    }}
+                    rootProps={{ 'data-testid': '1' }}
+                />
+            </Card>
+            <Card className="chart_card">
+                <Chart
+                    width={'350px'}
+                    height={'auto'}
+                    chartType="PieChart"
+                    loader={<div>Loading Chart</div>}
+                    data={[
+                        ['Results', 'Away Games'],
+                        ['Wins', results.awayWins.length],
+                        ['Loss', results.awayLoss.length],
+                        ['Draws', results.awayDraws.length],
+                    ]}
+                    options={{
+                        title: 'Away Games',
+                        is3D: 'true'
+                    }}
+                    rootProps={{ 'data-testid': '1' }}
+                />
+            </Card>
         </div>
     )
 

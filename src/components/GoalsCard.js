@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Card } from 'react-bootstrap';
 
 export const GoalsCard = ({ team }) => {
 
@@ -67,14 +68,14 @@ export const GoalsCard = ({ team }) => {
     }
 
     return (
-        <div className="GoalsCard">
-            <h3>Goals Scored Home: {teamHomeGoals()}</h3>
+        <Card className="GoalsCard">
+            <h5>Goals Scored Home: {teamHomeGoals()}</h5>
             <hr></hr>
-            <h3>Goals Scored Away: {teamAwayGoals()}</h3>
+            <h5>Goals Scored Away: {teamAwayGoals()}</h5>
             <hr></hr>
-            <h3>Goals Taken Home: {teamHomeGoalsTaken()}</h3>
+            <h5>Goals Taken Home: {teamHomeGoalsTaken()}</h5>
             <hr></hr>
-            <h3>Goals Taken Away: {teamAwayGoalsTaken()}</h3>
-        </div>
+            <h5>Goals Taken Away: {teamAwayGoalsTaken()}</h5>
+        </Card>
     )
 }

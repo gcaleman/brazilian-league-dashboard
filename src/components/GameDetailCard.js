@@ -24,7 +24,7 @@ export const GameDetailCard = ({ match }) => {
                     <Col md='4'>
 
                     </Col>
-                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius:'1px' }}>
+                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius: '1px' }}>
                         <h2 style={{ textAlign: 'center', padding: '30px' }}>{match.home}</h2>
                     </Col>
                 </Row>
@@ -32,7 +32,7 @@ export const GameDetailCard = ({ match }) => {
                     <Col md='4'>
 
                     </Col>
-                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius:'1px' }}>
+                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius: '1px' }}>
                         <h3 style={{ textAlign: 'center', padding: '10px', color: 'navy' }}>({match.hg})</h3>
                     </Col>
                 </Row>
@@ -40,7 +40,7 @@ export const GameDetailCard = ({ match }) => {
                     <Col md='4'>
 
                     </Col>
-                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius:'1px' }}>
+                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius: '1px' }}>
                         <h1 style={{ textAlign: 'center', padding: '20px', color: 'black' }}>X</h1>
                     </Col>
                 </Row>
@@ -48,7 +48,7 @@ export const GameDetailCard = ({ match }) => {
                     <Col md='4'>
 
                     </Col>
-                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius:'1px' }}>
+                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius: '1px' }}>
                         <h3 style={{ textAlign: 'center', padding: '10px', color: 'navy' }}>({match.ag})</h3>
                     </Col>
                 </Row>
@@ -56,7 +56,7 @@ export const GameDetailCard = ({ match }) => {
                     <Col md='4'>
 
                     </Col>
-                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius:'1px' }}>
+                    <Col md='4' style={{ borderLeft: '1px solid navy', borderRight: '1px solid navy', borderRadius: '1px' }}>
                         <h2 style={{ textAlign: 'center', padding: '30px' }}>{match.away}</h2>
                     </Col>
                 </Row>

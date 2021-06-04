@@ -1,5 +1,6 @@
-import { React, useState, useRef } from 'react';
+import { React } from 'react';
 import { Link } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
 
 export const SeasonGamesCard = (props) => {
 
@@ -8,17 +9,19 @@ export const SeasonGamesCard = (props) => {
     }
 
     return (
-        <div className="SeasonGamesCard">
+        <>
             {props.list.map((match, index) => {
                 const gameDetailLink = `/match/${match.home}/${match.away}/${match.season}`;
                 return (
-                    <ol key={index}>
-                        <h3 > <Link style={{ color: 'navy' }} to={gameDetailLink}>{match.home} vs {match.away}</Link> </h3>
-                        <hr></hr>
-                    </ol>
+                    <Link style={{ color: 'navy', textDecoration: 'none' }} to={gameDetailLink}>
+                        <Card className='games_card' key={index}>
+                            <ol>
+                                <h5 > {match.home} vs {match.away}</h5>
+                            </ol>
+                        </Card>
+                    </Link>
                 )
             })}
-        </div>
+        </>
     )
-
 }

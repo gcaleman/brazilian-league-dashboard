@@ -5,6 +5,7 @@ import { SeasonList } from '../components/SeasonList';
 import { Container, Row, Col, Navbar } from 'react-bootstrap';
 import { ResultsCard } from '../components/ResultsCard';
 import { BackButton } from '../components/BackButton';
+import './TeamDetailPage.css';
 
 
 export const TeamDetailPage = () => {
@@ -51,23 +52,25 @@ export const TeamDetailPage = () => {
                 </Container>
             </Navbar>
             <Container style={{ paddingBottom: '60px', marginTop: '20px' }}>
-                <Row>
-                    <Col md={4}>
-                        <h4 className="h3header">Seasons in Serie A</h4>
-                        <hr></hr>
-                        <SeasonList teamName={team.teamName} />
-                    </Col>
-                    <Col md={4} >
-                        <h4 className="h3header">Goals </h4>
-                        <hr></hr>
-                        <GoalsCard team={team} />
-                    </Col>
-                    <Col md={4} >
-                        <h4 className="h3header">Results Chart</h4>
-                        <hr></hr>
-                        <ResultsCard team={team} />
-                    </Col>
-                </Row>
+
+                    <Row>
+                        <Col md={4}>
+                            <h4 className="h3header">Seasons in Serie A</h4>
+                            <hr></hr>
+                            <SeasonList teamName={team.teamName} />
+                        </Col>
+                        <Col md={4} >
+                            <h4 className="h3header">Goals </h4>
+                            <hr></hr>
+                            <GoalsCard team={team} />
+                        </Col>
+                        <Col md={4} >
+                            <h4 className="h3header">Results Chart</h4>
+                            <hr></hr>
+                            <ResultsCard team={team} />
+                        </Col>
+                    </Row>
+
             </Container>
             <BackButton team={team.teamName} />
         </div >
