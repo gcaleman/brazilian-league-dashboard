@@ -1,0 +1,5 @@
+.season_list_scroll {
+    scroll-behavior: smooth;
+    height: 60vh;
+    overflow-y: scroll;
+}

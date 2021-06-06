@@ -1,0 +1,5 @@
+.games_list {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 60vh;
+}

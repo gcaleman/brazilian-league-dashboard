@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './SeasonList.css';
 
 export const SeasonList = ({ teamName }) => {
 
@@ -18,7 +19,7 @@ export const SeasonList = ({ teamName }) => {
     )
 
     return (
-        <>
+        <div className="season_list_scroll">
             {seasonList.map((seasons, index) => {
                 const seasonLink = `/season/${teamName}/${seasons}`;
                 return (
@@ -31,6 +32,6 @@ export const SeasonList = ({ teamName }) => {
                     </Link>
                 )
             })}
-        </>
+        </div>
     )
 }
